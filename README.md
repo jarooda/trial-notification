@@ -1,5 +1,9 @@
 # trial-notification
 
+# Database Schema
+
+![schema](./assets/xendit-final-tanpa-fk.png "schema")
+
 # API Definition
 
 **POST /notification**
@@ -9,7 +13,7 @@
     `POST`
   
 *  **URL Params**
-
+`
     None
 
 *  **URL Query**
