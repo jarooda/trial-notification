@@ -9,7 +9,7 @@ class NotificationController {
       return response.status
 
     } catch (error) {
-      return error.response.status  
+      return error.response?.status
     }
 
   }
@@ -34,13 +34,13 @@ class NotificationController {
         payment_id,
         status
       })
-
+      
       if (status === "Success") {
         res.status(200).json({message: "Notification Delivered"})
       } else {
         if (response === 404) {
           throw {
-            status: response,
+            status: 404,
             message: "Callback URL not Found"
           }
         } else {
@@ -52,7 +52,7 @@ class NotificationController {
       }
 
     } catch (error) {
-      res.status(error.status).json({error: error.message})
+      next(error)
     }
   }
 }
