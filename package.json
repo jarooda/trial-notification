@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "dev": "nodemon index.js"
+    "test": "jest --detectOpenHandles --coverage",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
